@@ -1,3 +1,5 @@
+[View live site](https://kilelx.github.io/Tip-Calculator/)
+
 # Frontend Mentor - Tip calculator app solution
 
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
@@ -29,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [View live site](https://kilelx.github.io/Tip-Calculator/)
 
 ## My process
 
