@@ -1,0 +1,127 @@
+<!-- À FAIRE :
+  couleur banche sur pourcent custom
+  faire message erreur pour chq truc
+  arrondir résultat à la deuixème décimale
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/main.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>spli
+      <br>
+      tter
+    </h1>
+
+    <div id="card">
+
+      <div id="values">
+
+        <div class="section">
+
+          <label for="bill" class="label">Bill</label>
+          <span class="message-error">Can't be negative</span>
+          <span class="icon dollar">
+            <input type="number" id="bill-input" name="bill" class="capture" placeholder="0">
+          </span>
+
+        </div>
+
+        <div id="tips-values">
+
+          <label for="tip" class="label">Select Tip %</label>
+          <div id="tipPercent">
+            <button class="percent tip">5%</button>
+            <button class="percent tip">10%</button>
+            <button class="percent tip active">15%</button>
+            <button class="percent tip">25%</button>
+            <button class="percent tip">50%</button>
+
+            <div id="input-tip">
+              <input type="number" name="tip" id="custom-tip" placeholder="Custom" class="percent">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section">
+          <label for="people" class="label">Number of People</label>
+          <span class="message-error">Can't be 0</span>
+          <span class="icon people">
+            <input type="number" id="people-input" name="people" class="capture" placeholder="0" value="2">
+          </span>
+        </div>
+
+      </div>
+
+      <div id="calculator">
+
+        <div class="amount">
+
+          <h2 class="results" id="tip-amount">Tip amount <br>
+            <span class="subtitle">/ person</span>
+          </h2>
+          <p id="value-tip">0.00$</p>
+
+        </div>
+
+        <div class="amount">
+
+          <h2 class="results" id="tip-total">Total <br>
+            <span class="subtitle">/ person</span>
+          </h2>
+          <p id="value-total">0.00$</p>
+
+        </div>
+
+        <button id="reset" disabled>RESET</button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Kieran L.</a>.
+  </footer>
+
+  <script src="./app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+button {
+    border: none;
+}
+
+input {
+    font-weight: 700;
+}
+
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-cyan2: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --light-grayish-cyan2: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--light-grayish-cyan);
+    font-family: 'Space Mono', monospace;
+}
+
+main {
+    margin: 3rem 0;
+}
+
+h1 {
+    color: var(--very-dark-cyan);
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 3rem;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:  #fff;
+    border-radius: 25px;
+    padding: 2rem;
+}
+
+#values {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.section {
+    position: relative;
+}
+
+.message-error {
+    color: rgb(230, 54, 54);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.show-error-message {
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+}
+
+#bill-input,
+#tipPercent,
+#people-input {
+    margin-bottom: 2.25rem;
+}
+
+#bill-input {
+    font-size: 1.5rem;
+
+    text-align: right;
+}
+
+.label {
+    font-weight: 700;
+}
+
+.capture {
+    background: var(--light-grayish-cyan2);
+    border: none;
+    border-radius: 5px;
+    margin-top: .75rem;
+
+    height: 50px;
+    width: 100%;
+}
+
+.capture::placeholder {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-right: .5rem;
+    text-align: right;
+}
+
+.icon::before {
+    display: block;
+    content: '';
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 12px;
+
+    position: absolute;
+    z-index: 100;
+    top: 45px;
+    left: 20px;
+}
+
+.dollar::before {
+    background-image: url(../images/icon-dollar.svg);
+}
+
+.people::before {
+    background-image: url(../images/icon-person.svg);
+}
+
+#tipPercent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.percent {
+    background-color: var(--very-dark-cyan);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: .5rem 0;
+    text-align: center;
+    height: 50px;
+    width: 120px;
+
+    transition: all .2s;
+}
+
+.percent:hover,
+.percent:active,
+.percent:focus {
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.active {
+    background-color: var(--light-grayish-cyan);
+    border: none;
+    color: var(--very-dark-cyan);
+}
+
+#input-tip {
+    display: flex;
+    align-items: center;
+
+
+}
+
+#custom-tip {
+    background-color: var(--light-grayish-cyan2);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    height: 50px;
+    width: 120px;
+}
+
+#people-input {
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+#calculator {
+    background-color: var(--very-dark-cyan);
+    border-radius: 15px;
+    padding: 1.25rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.25rem;
+}
+
+.amount p {
+    color: var(--strong-cyan);
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.results {
+    color: #fff;
+    font-size: 1rem;
+    padding-top: 13px;
+}
+
+.subtitle {
+    color: var(--dark-grayish-cyan2);
+    font-size: .75rem;
+}
+
+#reset {
+    background-color: var(--strong-cyan);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 700;
+    height: 50px;
+    text-align: center;
+
+    margin-top: auto;
+}
+
+#reset:disabled {
+    background-color: var(--dark-grayish-cyan);
+    cursor: auto;
+}
+
+@media only screen and (min-width: 59rem) {
+
+    #card {
+        flex-direction: row;
+        height: 30rem;
+        width: 57.5rem;
+    }
+
+    #values {
+        width: 48%;
+    }
+
+    #calculator {
+        padding: 2.5rem;
+        width: 48%;
+    }
+
+    #bill-input,
+    #tipPercent {
+        margin-bottom: 3rem;
+    }
+
+
+    .amount {
+        margin-bottom: 3.75rem;
+    }
+}
