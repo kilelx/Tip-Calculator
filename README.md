@@ -1,4 +1,4 @@
-[View live site](https://kilelx.github.io/Tip-Calculator/)
+[View live site](https://kilelx.github.io/Tip-Calculator/){:target="_blank"}
 
 # Frontend Mentor - Tip calculator app solution
 
