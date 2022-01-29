@@ -140,6 +140,8 @@ function setTipAmount() {
 function reset() {
 
     bill.value = 0;
+    setBillValue();
+
     tips[2].click();
     nbPeople.value = 2;
 
