@@ -1,5 +1,5 @@
 const bill = document.querySelector("#bill-input");
-const errMessage = document.querySelectorAll(".message-error");
+const errMessage = document.querySelectorAll(".error-message");
 const tips = document.querySelectorAll(".tip");
 const custTip = document.querySelector("#custom-tip");
 const nbPeople = document.querySelector("#people-input");
@@ -78,6 +78,7 @@ function setTipPercent(event) {
         }
     })
 
+    custTip.value = "";
     setTipAmount();
 
 }
@@ -85,19 +86,25 @@ function setTipPercent(event) {
 function setCustomTip() {
 
     // Validate the custom tip
-    if(!validTip(custTip.value)) {
-        console.log("erreur regex");
-    }
+    if(!validTip(custTip.value) && custTip.value !== '') {
 
-    tipPercent = parseFloat(custTip.value)/100;
-    console.log(tipPercent);
+        errMessage[1].classList.add("show-error-message");
 
-    tips.forEach(btn => {
-        btn.classList.remove("active");
-    })
+        setTimeout( function() {
+            errMessage[1].classList.remove("show-error-message");
+        }, 3000);
 
-    if (tipCustom.value !== '') {
-        setTipPercent();
+        tips[2].click();
+
+    } else {
+
+        tipPercent = parseFloat(custTip.value)/100;
+
+        tips.forEach(btn => {
+            btn.classList.remove("active");
+        })
+
+        setTipAmount();
     }
 
 }
@@ -105,9 +112,9 @@ function setCustomTip() {
 function setNbOfPeople() {
 
     if(!validPeople(nbPeople.value)) {
-        errMessage[1].classList.add("show-error-message");
+        errMessage[2].classList.add("show-error-message");
         setTimeout( function() {
-            errMessage[1].classList.remove("show-error-message");
+            errMessage[2].classList.remove("show-error-message");
         }, 3000);
         nbPeople.value = 0.0;
     } else {

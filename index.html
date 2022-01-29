@@ -1,9 +1,3 @@
-<!-- À FAIRE :
-  couleur banche sur pourcent custom
-  faire message erreur pour chq truc
-  arrondir résultat à la deuixème décimale
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +46,7 @@
         <div class="section">
 
           <label for="bill" class="label">Bill</label>
-          <span class="message-error">Can't be negative</span>
+          <span class="error-message">Can't be negative</span>
           <span class="icon dollar">
             <input type="number" id="bill-input" name="bill" class="capture" placeholder="0">
           </span>
@@ -62,6 +56,7 @@
         <div id="tips-values">
 
           <label for="tip" class="label">Select Tip %</label>
+          <span class="error-message">Invalid tip</span>
           <div id="tipPercent">
             <button class="percent tip">5%</button>
             <button class="percent tip">10%</button>
@@ -78,7 +73,7 @@
 
         <div class="section">
           <label for="people" class="label">Number of People</label>
-          <span class="message-error">Can't be 0</span>
+          <span class="error-message">Can't be 0</span>
           <span class="icon people">
             <input type="number" id="people-input" name="people" class="capture" placeholder="0" value="2">
           </span>
